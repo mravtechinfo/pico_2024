@@ -99,6 +99,22 @@ http://titan.picoctf.net:51196/
  
  picoCTF{pr3tty_c0d3_622b2c88}
  
+ 
+ --------------------------------------------------------------------------------------------------------------------------
+ 
+ Challenge name :IntroToBurp
+ 
+ http://titan.picoctf.net:54461/
+ 
+ 
+  picoCTF{#0TP_Bypvss_SuCc3$S_2e80f1fd}
+
+just intercept the form you get the /dashboard redirection
+
+then it will give the otp parametr jsut play with it
+I removed it lol gotthe flag
+
+
  --------------------------------------------------------------------------------------------------------------------------
  
  
