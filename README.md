@@ -393,5 +393,190 @@ The flag is: picoCTF{b1tw^3se_0p3eR@tI0n_su33essFuL_d6f8047e}
 
 
 
+Scan Surprise
+ |  |  | 50 points
+Tags: 
+AUTHOR: JEFFERY JOHN
 
+Description
+I've gotten bored of handing out flags as text. Wouldn't it be cool if they were an image instead?
+You can download the challenge files here:
+challenge.zip
+Additional details will be available after launching your challenge instance.
+
+
+
+https://artifacts.picoctf.net/c_atlas/2/challenge.zip
+
+picoCTF{p33k_@_b00_b5ce2572}
+
+scan the qr and get the flag
+
+-------------------------------------------------------------------------------------------------------------
+Verify
+ |  |  | 50 points
+Tags: 
+AUTHOR: JEFFERY JOHN
+
+Description
+People keep trying to trick my players with imitation flags. I want to make sure they get the real thing! I'm going to provide the SHA-256 hash and a decrypt script to help you know that my flags are legitimate.
+You can download the challenge files here:
+challenge.zip
+Additional details will be available after launching your challenge instance.
+
+https://artifacts.picoctf.net/c_rhea/11/challenge.zip
+
+
+./d.sh files/ | grep -v "This flag is fake! Keep looking!" 
+
+
+picoCTF{trust_but_verify_8eee7195}
+
+modified script 
+
+
+#!/bin/bash
+
+# Function to decrypt a file
+decrypt_file() {
+    local file="$1"
+    if openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -salt -in "$file" -k picoCTF; then
+        echo "Decrypted contents of '$file':"
+    else
+        echo "Error: Failed to decrypt '$file'. This flag is fake! Keep looking!"
+    fi
+}
+
+# Recursive function to decrypt all files in a directory
+decrypt_files_recursive() {
+    local directory="$1"
+    for file in "$directory"/*; do
+        if [ -f "$file" ]; then
+            decrypt_file "$file"
+        elif [ -d "$file" ]; then
+            decrypt_files_recursive "$file"
+        fi
+    done
+}
+
+# Check if the user provided a directory name as an argument
+if [ $# -eq 0 ]; then
+    echo "Expected usage: decrypt.sh <directory>"
+    exit 1
+fi
+
+# Store the provided directory name in a variable
+directory="$1"
+
+# Check if the provided argument is a directory
+if [ ! -d "$directory" ]; then
+    echo "Error: '$directory' is not a valid directory."
+    exit 1
+fi
+
+# Decrypt files in the specified directory
+decrypt_files_recursive "$directory"
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CanYouSee
+ |  |  | 100 points
+Tags: 
+AUTHOR: MUBARAK MIKAIL
+
+Description
+How about some hide and seek?
+Download this file here.
+
+
+https://artifacts.picoctf.net/c_titan/5/unknown.zip
+
+
+
+download the zip file
+
+unzip it there is a png image
+
+
+use exiftool see the meta data you find a base 64 decode it get the flag
+
+
+
+ ~/p/f/can_you_see  exiftool ukn_reality.jpg                                                                                                       Mon Mar 25 01:25:43 2024
+ExifTool Version Number         : 12.67
+File Name                       : ukn_reality.jpg
+Directory                       : .
+File Size                       : 2.3 MB
+File Modification Date/Time     : 2024:02:16 04:10:17+05:30
+File Access Date/Time           : 2024:02:16 04:10:17+05:30
+File Inode Change Date/Time     : 2024:03:25 01:25:41+05:30
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Resolution Unit                 : inches
+X Resolution                    : 72
+Y Resolution                    : 72
+XMP Toolkit                     : Image::ExifTool 11.88
+Attribution URL                 : cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==
+Image Width                     : 4308
+Image Height                    : 2875
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 4308x2875
+Megapixels                      : 12.4
+ ~/p/f/can_you_see                                                                                                                         255ms  Mon Mar 25 01:26:01 2024
+ ~/p/f/can_you_see                                                                                                                         255ms  Mon Mar 25 01:26:11 2024
+ ~/p/f/can_you_see  base64 -d cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==                                                             255ms  Mon Mar 25 01:26:11 2024
+base64: 'cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==': No such file or directory
+ !  ~/p/f/can_you_see  echo "cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==" > b64                                                              Mon Mar 25 01:26:19 2024
+ ~/p/f/can_you_see  base64 -d b64                                                                                                                  Mon Mar 25 01:27:17 2024
+picoCTF{ME74D47A_HIDD3N_4dabddcb}
+
+
+
+picoCTF{ME74D47A_HIDD3N_4dabddcb}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Secret of the Polyglot
+ |  |  | 100 points
+Tags: 
+AUTHOR: SYREAL
+
+Description
+The Network Operations Center (NOC) of your local institution picked up a suspicious file, they're getting conflicting information on what type of file it is. They've brought you in as an external expert to examine the file. Can you extract all the information from this strange file?
+Download the suspicious file here.
+
+
+https://artifacts.picoctf.net/c_titan/8/flag2of2-final.pdf
+
+
+part 1 1n_pn9_&_pdf_1f991f77}
+
+part2 picoCTF{f1u3n7_}
+
+
+picoCTF{f1u3n7_1n_pn9_&_pdf_1f991f77}
+
+
+flag is dead bcz of previous old file again solving by changeoin the extention to png
+
+
+
+picoCTF{f1u3n7_1n_pn9_&_pdf_249d05c0}
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
