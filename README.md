@@ -572,6 +572,24 @@ picoCTF{f1u3n7_1n_pn9_&_pdf_1f991f77}
 
 flag is dead bcz of previous old file again solving by changeoin the extention to png
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+interencdec
+ |  |  | 50 points
+Tags: 
+AUTHOR: NGIRIMANA SCHADRACK
+
+Description
+Can you get the real meaning from this file.
+Download the file here.
+
+https://artifacts.picoctf.net/c_titan/2/enc_flag
+
+picoCTF{caesar_d3cr9pt3d_78250afc}
+
+twice base 64 and the rot19 or caesar ciper you can say
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 picoCTF{f1u3n7_1n_pn9_&_pdf_249d05c0}
