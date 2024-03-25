@@ -598,3 +598,117 @@ picoCTF{f1u3n7_1n_pn9_&_pdf_249d05c0}
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Binary Search
+ |  |  | 100 points
+Tags: 
+AUTHOR: JEFFERY JOHN
+
+Description
+Want to play a game? As you use more of the shell, you might be interested in how they work! Binary search is a classic algorithm used to quickly find an item in a sorted list. Can you find the flag? You'll have 1000 possibilities and only 10 guesses.
+Cyber security often has a huge amount of data to look through - from logs, vulnerability reports, and forensics. Practicing the fundamentals manually might help you in the future when you have to write your own tools!
+You can download the challenge files here:
+challenge.zip
+ssh -p 63335 ctf-player@atlas.picoctf.net
+Using the password 1ad5be0d. Accept the fingerprint with yes, and ls once connected to begin. Remember, in a shell, passwords are hidden!
+
+
+
+picoCTF{g00d_gu355_3af33d18}
+
+
+ !  ~/p/g/h/c/drop-in  ssh -p 63335 ctf-player@atlas.picoctf.net                                             Mon Mar 25 12:46:48 2024
+The authenticity of host '[atlas.picoctf.net]:63335 ([18.217.83.136]:63335)' can't be established.
+ED25519 key fingerprint is SHA256:M8hXanE8l/Yzfs8iuxNsuFL4vCzCKEIlM/3hpO13tfQ.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[atlas.picoctf.net]:63335' (ED25519) to the list of known hosts.
+ctf-player@atlas.picoctf.net's password: 
+Welcome to the Binary Search Game!
+I'm thinking of a number between 1 and 1000.
+Enter your guess: 500
+Higher! Try again.
+Enter your guess: 600
+Lower! Try again.
+Enter your guess: 550
+Higher! Try again.
+Enter your guess: 560
+Higher! Try again.
+Enter your guess: 570
+Higher! Try again.
+Enter your guess: 580
+Lower! Try again.
+Enter your guess: 575
+Lower! Try again.
+Enter your guess: 574
+Lower! Try again.
+Enter your guess: 573
+Lower! Try again.
+Enter your guess: 572
+Congratulations! You guessed the correct number: 572
+Here's your flag: picoCTF{g00d_gu355_3af33d18}
+Connection to atlas.picoctf.net closed.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+endianness
+ |  |  | 200 points
+Tags: 
+AUTHOR: NANA AMA ATOMBO-SACKEY
+
+Description
+Know of little and big endian?
+nc titan.picoctf.net 65485. Source
+
+Welcome to the Endian CTF!
+You need to find both the little endian and big endian representations of a word.
+If you get both correct, you will receive the flag.
+Word: trvcs
+Enter the Little Endian representation: 73 63 76 72 74
+Incorrect Little Endian representation. Try again!
+Enter the Little Endian representation: Incorrect Little Endian representation. Try again!
+Enter the Little Endian representation: Incorrect Little Endian representation. Try again!
+Enter the Little Endian representation: Incorrect Little Endian representation. Try again!
+Enter the Little Endian representation: Incorrect Little Endian representation. Try again!
+Enter the Little Endian representation: 7363767274
+Correct Little Endian representation!
+Enter the Big Endian representation: 7472766373
+Correct Big Endian representation!
+Congratulations! You found both endian representations correctly!
+Your Flag is: picoCTF{3ndi4n_sw4p_su33ess_817b7cfe}
+
+
+understand and input the number using googling 
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+dont-you-love-banners
+ |  |  | 300 points
+Tags: 
+AUTHOR: LOIC SHEMA / SYREAL
+
+Description
+Can you abuse the banner?
+Additional details will be available after launching your challenge instance.
+
+
+
+dont-you-love-banners
+ |  |  | 300 points
+Tags: 
+AUTHOR: LOIC SHEMA / SYREAL
+
+Description
+Can you abuse the banner?
+The server has been leaking some crucial information on tethys.picoctf.net 51918. Use the leaked information to get to the server.
+To connect to the running application use nc tethys.picoctf.net 53635. From the above information abuse the machine and find the flag in the /root directory.
+
+
+SSH-2.0-OpenSSH_7.6p1 My_Passw@rd_@1234
+
+
